@@ -82,6 +82,18 @@
                 }
             ],
             "result": {}
+        },
+        {
+            "description": "Writes a message to console.log().",
+            "id": "ADDFIVE",
+            "name": "ADDFIVE",
+            "parameters": [
+                {
+                    "name": "val",
+                    "type": "any"
+                }
+            ],
+            "result": {}
         }
     ]
 }
