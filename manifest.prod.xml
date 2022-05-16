@@ -86,9 +86,9 @@
         <bt:Image id="Icon.80x80" DefaultValue="https://b-gonzalez.github.io/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Functions.Script.Url" DefaultValue="https://b-gonzalez.github.io/dist/functions.js"/>
-        <bt:Url id="Functions.Metadata.Url" DefaultValue="https://b-gonzalez.github.io/dist/functions.json"/>
-        <bt:Url id="Functions.Page.Url" DefaultValue="https://b-gonzalez.github.io/dist/functions.html"/>
+        <bt:Url id="Functions.Script.Url" DefaultValue="https://b-gonzalez.github.io/functions.js"/>
+        <bt:Url id="Functions.Metadata.Url" DefaultValue="https://b-gonzalez.github.io/functions.json"/>
+        <bt:Url id="Functions.Page.Url" DefaultValue="https://b-gonzalez.github.io/functions.html"/>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
         <bt:Url id="Commands.Url" DefaultValue="https://b-gonzalez.github.io/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://b-gonzalez.github.io/taskpane.html"/>
