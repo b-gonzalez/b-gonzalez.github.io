@@ -1,99 +1,47 @@
 {
+    "allowCustomDataForDataTypeAny": true,
     "functions": [
         {
-            "description": "Adds two numbers.",
-            "id": "ADD",
-            "name": "ADD",
+            "description": "Search for products that match a given substring. Try =CONTOSO.MOVIESEARCH(\"https://www.justwatch.com/us/movie/the-matrix\", false).",
+            "id": "MOVIESEARCH",
+            "name": "MOVIESEARCH",
             "parameters": [
                 {
-                    "description": "First number",
-                    "name": "first",
-                    "type": "number"
-                },
-                {
-                    "description": "Second number",
-                    "name": "second",
-                    "type": "number"
-                }
-            ],
-            "result": {
-                "type": "number"
-            }
-        },
-        {
-            "description": "Displays the current time once a second.",
-            "id": "CLOCK",
-            "name": "CLOCK",
-            "options": {
-                "stream": true
-            },
-            "parameters": [],
-            "result": {
-                "type": "string"
-            }
-        },
-        {
-            "description": "Increments a value once a second.",
-            "id": "INCREMENT",
-            "name": "INCREMENT",
-            "options": {
-                "stream": true
-            },
-            "parameters": [
-                {
-                    "description": "Amount to increment",
-                    "name": "incrementBy",
-                    "type": "number"
-                }
-            ],
-            "result": {
-                "type": "number"
-            }
-        },
-        {
-            "description": "Writes a message to console.log().",
-            "id": "LOG",
-            "name": "LOG",
-            "parameters": [
-                {
-                    "description": "String to write.",
-                    "name": "message",
+                    "description": "The string to search for in the sample JSON data.",
+                    "name": "query",
                     "type": "string"
+                },
+                {
+                    "description": "Define whether the search should be a match of the whole product name or part of the product name. If omitted, completeMatch = false.",
+                    "name": "completeMatch",
+                    "optional": true,
+                    "type": "boolean"
                 }
             ],
             "result": {
-                "type": "string"
+                "dimensionality": "matrix"
             }
         },
         {
-            "description": "Writes a message to console.log().",
-            "id": "MINUS",
-            "name": "MINUS",
+            "description": "Search for products that match a given substring. Try =CONTOSO.MOVIESEARCH2(\"https://www.justwatch.com/us/movie/tar-2022\").",
+            "id": "MOVIESEARCH2",
+            "name": "MOVIESEARCH2",
             "parameters": [
                 {
-                    "description": "first value.",
-                    "name": "val1",
-                    "type": "any"
+                    "description": "The string to search for in the sample JSON data.",
+                    "name": "query",
+                    "type": "string"
                 },
                 {
-                    "description": "second value.",
-                    "name": "val2",
-                    "type": "any"
+                    "description": "Define whether the search should be a match of the whole product name or part of the product name. If omitted, completeMatch = false.",
+                    "name": "completeMatch",
+                    "optional": true,
+                    "type": "boolean"
                 }
             ],
-            "result": {}
-        },
-        {
-            "description": "Writes a message to console.log().",
-            "id": "ADDFIVE",
-            "name": "ADDFIVE",
-            "parameters": [
-                {
-                    "name": "val",
-                    "type": "any"
-                }
-            ],
-            "result": {}
+            "result": {
+                "dimensionality": "matrix"
+            }
         }
     ]
 }

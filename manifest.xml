@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
-  <Id>34b00292-367b-4ae8-9eb5-8f4b3ad4b69b</Id>
-  <Version>1.0.0.1</Version>
+  <Id>d36a67d2-60bb-4789-9014-22aaabd345c4</Id>
+  <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="First function Add-in"/>
+  <DisplayName DefaultValue="My custom functions add-in"/>
   <Description DefaultValue="Write your own Excel functions in TypeScript."/>
   <IconUrl DefaultValue="https://b-gonzalez.github.io/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://b-gonzalez.github.io/assets/icon-64.png"/>
@@ -17,7 +17,7 @@
   </Hosts>
   <Requirements>
     <Sets DefaultMinVersion="1.1">
-      <Set Name="CustomFunctionsRuntime" MinVersion="1.1"/>
+      <Set Name="SharedRuntime" MinVersion="1.1"/>
     </Sets>
   </Requirements>
   <DefaultSettings>
@@ -27,13 +27,16 @@
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Hosts>
       <Host xsi:type="Workbook">
+        <Runtimes>
+          <Runtime resid="Taskpane.Url" lifetime="long"/>
+        </Runtimes>
         <AllFormFactors>
           <ExtensionPoint xsi:type="CustomFunctions">
             <Script>
               <SourceLocation resid="Functions.Script.Url"/>
             </Script>
             <Page>
-              <SourceLocation resid="Functions.Page.Url"/>
+              <SourceLocation resid="Taskpane.Url"/>
             </Page>
             <Metadata>
               <SourceLocation resid="Functions.Metadata.Url"/>
@@ -47,7 +50,7 @@
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
-          <FunctionFile resid="Commands.Url"/>
+          <FunctionFile resid="Taskpane.Url"/>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
               <Group id="CommandsGroup">
@@ -88,9 +91,7 @@
       <bt:Urls>
         <bt:Url id="Functions.Script.Url" DefaultValue="https://b-gonzalez.github.io/functions.js"/>
         <bt:Url id="Functions.Metadata.Url" DefaultValue="https://b-gonzalez.github.io/functions.json"/>
-        <bt:Url id="Functions.Page.Url" DefaultValue="https://b-gonzalez.github.io/functions.html"/>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://b-gonzalez.github.io/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://b-gonzalez.github.io/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
