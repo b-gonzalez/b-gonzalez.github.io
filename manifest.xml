@@ -12,6 +12,7 @@
   <AppDomains>
     <AppDomain>https://www.contoso.com</AppDomain>
     <AppDomain>https://apis.justwatch.com/graphql</AppDomain>
+    <AppDomain>https://www.justwatch.com/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
