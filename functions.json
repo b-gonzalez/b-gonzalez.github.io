@@ -1,0 +1,47 @@
+{
+    "allowCustomDataForDataTypeAny": true,
+    "functions": [
+        {
+            "description": "Search for products that match a given substring. Try =CONTOSO.MOVIESEARCH(\"https://www.justwatch.com/us/movie/the-matrix\", false).",
+            "id": "MOVIESEARCH",
+            "name": "MOVIESEARCH",
+            "parameters": [
+                {
+                    "description": "The string to search for in the sample JSON data.",
+                    "name": "query",
+                    "type": "string"
+                },
+                {
+                    "description": "Define whether the search should be a match of the whole product name or part of the product name. If omitted, completeMatch = false.",
+                    "name": "completeMatch",
+                    "optional": true,
+                    "type": "boolean"
+                }
+            ],
+            "result": {
+                "dimensionality": "matrix"
+            }
+        },
+        {
+            "description": "Search for products that match a given substring. Try =CONTOSO.MOVIESEARCH2(\"https://www.justwatch.com/us/movie/tar-2022\").",
+            "id": "MOVIESEARCH2",
+            "name": "MOVIESEARCH2",
+            "parameters": [
+                {
+                    "description": "The string to search for in the sample JSON data.",
+                    "name": "query",
+                    "type": "string"
+                },
+                {
+                    "description": "Define whether the search should be a match of the whole product name or part of the product name. If omitted, completeMatch = false.",
+                    "name": "completeMatch",
+                    "optional": true,
+                    "type": "boolean"
+                }
+            ],
+            "result": {
+                "dimensionality": "matrix"
+            }
+        }
+    ]
+}
