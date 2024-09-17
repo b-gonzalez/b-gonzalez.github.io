@@ -18,4 +18,4 @@ jobs:
       - name: Run PowerShell script
         shell: pwsh
         run: | 
-          ./run_macro.ps1
+          ./write_message.ps1
