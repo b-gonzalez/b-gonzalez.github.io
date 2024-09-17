@@ -6,16 +6,27 @@ on:
 
 jobs:
   myJob:
-    name: PS - Update list
     runs-on: windows-latest
-
+    
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
+      - name: Run PowerShell Script
+        shell: powershell
+        run: |
+          $PSVersionTable.PSVersion
+
+# jobs:
+#   myJob:
+#     name: PS - Update list
+#     runs-on: windows-latest
+
+#     steps:
+#       - name: Check out repository code
+#         uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 1
       
-      - name: Run PowerShell script
-        shell: pwsh
-        run: | 
-          ./write_message.ps1
+#       - name: Run PowerShell script
+#         shell: pwsh
+#         run: | 
+#           ./write_message.ps1
+
