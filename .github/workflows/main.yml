@@ -1,4 +1,4 @@
-name: Powershell scriptt
+name: Powershell script
 on:
   push:
     branches:
